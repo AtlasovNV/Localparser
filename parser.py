@@ -1,3 +1,6 @@
+#!/home/qwil/Localparser/venv/bin/python
+
+
 import requests
 from bs4 import BeautifulSoup as bs
 import time
@@ -14,7 +17,7 @@ def cbrf_pars(base_url, headers):
         soup = bs(request.content, 'html.parser')
         div = soup.find_all('div', attrs={'id':'widget_exchange'})
         print(div)
-        file = open('/home/qwil/devlop/projects/parser/Currency Rates_{}.txt'.format(time.ctime()), "w")
+        file = open('/home/qwil/Localparser/Currency Rates_{}.txt'.format(time.ctime()), "w")
         file.write(str(div))
         file.close()
     else:
