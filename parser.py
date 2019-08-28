@@ -39,8 +39,8 @@ def format_rate():
     # -*- coding: utf-8 -*-
     with open('pars.txt') as file:
         course = [row.strip() for row in file]
-        dol= 'Курс доллара \n', course[18]
-        evr = 'Курс евро \n', course[29]
+        dol= 'Доллар США $', course[18]
+        evr = 'Евро €', course[29]
         file = open('Currency Rates_{}.txt'.format(time.ctime()), "w")
         file.write(str(dol))
         file.write('\n')
